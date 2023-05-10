@@ -1,0 +1,42 @@
+services:
+  db:
+    image: postgres:14.5
+    container_name: customer_db
+    environment:
+      POSTGRES_USER: acorn
+      POSTGRES_PASSWORD: acorn
+      POSTGRES_DB: customer
+      PGDATA: /data/customer
+#      Это почему-то ломает проект и выдают ошибку авторизации
+#    volumes:
+#      - db:/data/customer
+    ports:
+      - "5432:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+  antonacorn-api:
+    container_name: antonacorn-api
+    image: antonacorn/antonacorn-api
+    environment:
+#      rewrite value
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
+    ports:
+      - "8088:8080"
+    networks:
+      - db
+###   It will not run unless db starts
+    depends_on:
+      - db
+    restart: unless-stopped
+###    The same as environment
+###    command:
+###      - --spring.datasource.url=jdbc:postgresql://db:5432/customer
+
+networks:
+    db:
+      driver: bridge
+
+volumes:
+  db:
