@@ -13,9 +13,6 @@
 	<groupId>ca.acorn</groupId>
 	<artifactId>antonacorn-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<organization>
-		<name>antonacorn</name>
-	</organization>
 	<name>spring-boot</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -23,7 +20,7 @@
 		<jsonwebtoken.version>0.11.5</jsonwebtoken.version>
 		<docker.username>antonacorn</docker.username>
 		<docker.image.name>antonacorn-api</docker.image.name>
-		<docker.image.tag>latest</docker.image.tag>
+		<docker.image.tag/>
 	</properties>
 	<dependencies>
 
