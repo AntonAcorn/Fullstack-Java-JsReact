@@ -10,7 +10,7 @@ spring:
     password: acorn
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -18,3 +18,8 @@ spring:
     show-sql: true
   main:
     web-application-type: servlet
+
+  graphql:
+    graphiql:
+      enabled: true
+#      path: /graphiql

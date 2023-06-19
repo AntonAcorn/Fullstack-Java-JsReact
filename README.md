@@ -12,3 +12,6 @@ Technology stack:
 8. TestContainers
 9. Docker
 10. Jib 
+11. Slack integration
+12. AWS
+13. CI/CD to AWS

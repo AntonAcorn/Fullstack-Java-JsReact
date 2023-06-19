@@ -1,8 +1,11 @@
 package ca.acorn.springboot.customer;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
-
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,14 +13,8 @@ import lombok.*;
 @Entity
 public class Customer {
      @Id
-     @SequenceGenerator(
-             name = "customer_id_seq",
-             sequenceName = "customer_id_seq",
-             allocationSize = 1
-     )
      @GeneratedValue(
-             strategy = GenerationType.SEQUENCE,
-             generator = "customer_id_seq"
+             strategy = GenerationType.IDENTITY
      )
      private Long id;
      @Column(

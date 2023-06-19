@@ -1,0 +1,12 @@
+type Customer {
+    	id: ID!,
+    	name: String,
+    	email: String,
+    	age: Int
+}
+
+input CustomerInput {
+    name: String,
+    email: String,
+    age: Int
+}

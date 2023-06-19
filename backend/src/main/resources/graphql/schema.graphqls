@@ -1,0 +1,13 @@
+schema {
+    query: Queries
+    mutation: Mutations
+}
+
+type Queries {
+#    customer(id: ID): Customer
+    getCustomerById(id: ID!): Customer
+}
+
+type Mutations {
+    createCustomer(customer: CustomerInput!): Customer
+}
