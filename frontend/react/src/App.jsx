@@ -5,13 +5,15 @@ return (
         <UserProfile
         name = {"Jamila"}
         age = {21}
-        gender = {"women"}
-        />
+        gender = {"women"}>
+        <p>Hello</p>
+        </UserProfile>
         <UserProfile
             name = {"Marco"}
             age = {24}
-            gender = {"men"}
-        />
+            gender = {"men"}>
+            <h1>Ciao!</h1>
+        </UserProfile>
     </div>
     )
 }
