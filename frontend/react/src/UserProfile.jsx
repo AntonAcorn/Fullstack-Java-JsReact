@@ -4,7 +4,7 @@ const UserProfile = ({ name, age, gender, ...props }) => {
             <h1>{name}</h1>
             <p>{age}</p>
             <img
-                src={`https://randomuser.me/api/portraits/${gender}/66.jpg`}
+                src={`https://randomuser.me/api/portraits/${gender}/44.jpg`}
             />
             {props.children}
         </div>

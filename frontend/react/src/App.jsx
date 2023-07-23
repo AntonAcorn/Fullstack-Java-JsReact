@@ -4,15 +4,17 @@ return (
     <div>
         <UserProfile
         name = {"Jamila"}
-        age = {21}
+        age = {22}
         gender = {"women"}>
-        <p>Hello</p>
         </UserProfile>
         <UserProfile
-            name = {"Marco"}
-            age = {24}
+            name = {"Anker"}
+            age = {26}
             gender = {"men"}>
-            <h1>Ciao!</h1>
+        </UserProfile>  <UserProfile
+            name = {"Foster"}
+            age = {12}
+            gender = {"men"}>
         </UserProfile>
     </div>
     )
